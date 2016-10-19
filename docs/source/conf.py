@@ -32,10 +32,6 @@
 
 #pip install, import sphinx_rtd_theme, with html_theme = 'sphinx_rtd_theme' and html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 #pip install, from better import better_theme_path, with html_theme = 'better' and html_theme_path = [better_theme_path]
-
-#from better import better_theme_path
-#def setup(app):
-#	app.add_stylesheet('custom.css')
 	
 extensions = [
     'sphinx.ext.autodoc',
@@ -132,7 +128,7 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -168,6 +164,10 @@ html_theme = 'alabaster'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+def setup(app):
+   # app.add_javascript("custom.js")
+   app.add_stylesheet("custom.css")
+   
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
